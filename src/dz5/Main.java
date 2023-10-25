@@ -1,14 +1,19 @@
-/*
+package dz5;/*
 ДЗ: Доработать калькулятор, получение от пользователя действия, которое нужно выполнить.
 Можно получить таким образом -
 если пользователь вводит 1, то это сложение, 2 - разность и т.д.
 Вывести результат действия. Используйте конструкции if -else, case.
 * */
 
+import p1.People;
+
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+
+        People people = new People();
+
         Scanner scanner = new Scanner(System.in);
 
         System.out.print("Введите первое число: ");
@@ -24,7 +29,7 @@ public class Main {
                 sum(a, b);
                 break;
             case 2:
-                System.out.println("Разность: " + (a - b));
+                System.out.println("Разность: " + razn(a,b));
                 break;
             case 3:
                 System.out.println("Произведение: " + (a * b));
@@ -51,6 +56,10 @@ public class Main {
     public static void sum(int a, int b){
         System.out.println("Сумма: " + (a + b));
     }
-    
+
+    public static int razn(int a, int b){
+        return a-b;
+    }
+
 
 }
